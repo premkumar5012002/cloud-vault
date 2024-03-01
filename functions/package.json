@@ -1,0 +1,21 @@
+{
+	"name": "s3-webhook-sync",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev:deploy": "terraform init && terraform apply --auto-approve",
+		"build": "esbuild src/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"aws-lambda": "^1.0.7"
+	},
+	"devDependencies": {
+		"@types/aws-lambda": "^8.10.130",
+		"@types/node": "^20.10.1",
+		"esbuild": "^0.19.8"
+	}
+}
